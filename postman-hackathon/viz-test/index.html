@@ -1,0 +1,202 @@
+<head>
+    <style>
+        body {
+            background-color: #343434;
+        }
+    </style>
+</head>
+
+
+
+<text style="position: fixed;top: 25%; left: 75%;font-size: xx-large;color: white;">TV Series Ratings</text>
+
+<text style="position: fixed;top: 45%; left: 75%;font-size: x-large;color: white;" class="episodeName"></text>
+<text style="position: fixed;top: 55%; left: 75%;font-size: x-large;color: white;" class="rating"></text>
+
+<div class="board"></div>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+
+<script>
+    var margin = { top: 40, right: 10, bottom: 10, left: 40 },
+        width = window.innerWidth - margin.left - margin.right,
+        height = window.innerHeight - margin.top - margin.bottom;
+
+    var svg = d3.select(".board")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("transform",
+            "translate(0, " + margin.top + ")")
+
+    RADIUS = 45
+    SEASON_COUNT = 10
+
+    EPISODE_SIZE = 8
+    EPISODE_ANGLE = 10 / 180 * Math.PI
+
+    RED = "#F54748"
+    GREEN = "#66DE93"
+
+    let episodeLabel = d3.select(".episodeName")
+    let ratingLabel = d3.select(".rating")
+
+    let ratingScale = d3.scaleLinear()
+        .domain([0, 10])
+        .range([0 * EPISODE_ANGLE, EPISODE_ANGLE])
+
+    let outline = svg.append("g")
+        .classed("outline", true)
+
+    function appendCircles() {
+        let seasonMarkers = outline.append("g")
+
+        seasonMarkers.selectAll("circle")
+            .data(_.range(RADIUS, RADIUS * (SEASON_COUNT + 2), RADIUS))
+            .enter()
+            .append("circle")
+            .attr("fill", "none")
+            .attr("stroke", "white")
+            .attr("cx", 0)
+            .attr("cy", height)
+            .attr("r", d => d)
+    }
+
+    function appendLines() {
+        let titleGuideMarkers = outline.append("g")
+
+        titleGuideMarkers.selectAll("line")
+            .data(_.range(0, showCount))
+            .enter()
+            .append("line")
+            .attr("stroke", "white")
+            .attr("x1", d => (RADIUS) * Math.cos(angleScale(d) + + EPISODE_ANGLE / 2))
+            .attr("y1", d => height - (RADIUS) * Math.sin(angleScale(d) + EPISODE_ANGLE / 2))
+            .attr("x2", d => ((SEASON_COUNT + 1) * RADIUS) * Math.cos(angleScale(d) + EPISODE_ANGLE / 2))
+            .attr("y2", d => height - ((SEASON_COUNT + 1) * RADIUS) * Math.sin(angleScale(d) + EPISODE_ANGLE / 2))
+
+
+    }
+
+    function appendSeason(show, showAverage, showGroup, season, seasonData, xScale) {
+        let seasonGroup = showGroup.append("g")
+            .classed("season", true)
+
+        seasonGroup.selectAll(".episode")
+            .data(seasonData)
+            .enter()
+            .append("path")
+            .classed("episode", true)
+            .attr("fill", d => {
+                if (d.imdbRating == "N/A") {
+                    return "black"
+                }
+
+                if (d.imdbRating < showAverage) {
+                    return RED
+                }
+                else {
+                    return GREEN
+                }
+            })
+            .attr("stroke", "steelblue")
+            .attr("stroke-width", 0.5)
+            .attr("fill-opacity", 1)
+            .attr("d", d3.arc()
+                .innerRadius((d, i) => {
+                    return 2 + (season) * RADIUS + xScale(i)
+                })
+                .outerRadius((d, i) => {
+                    return 2 + (season) * RADIUS + xScale(i) + EPISODE_SIZE
+                })
+                .startAngle(angleScale(show))
+                .endAngle(d => angleScale(show) + ratingScale(d.imdbRating == "N/A" ? 5 : d.imdbRating))
+            )
+            .attr("transform", (d, i) => "translate(0, " + height + ")")
+            .on("mouseover", (event, d) => {
+                d3.selectAll(".episode")
+                    .attr("fill-opacity", 0.1)
+
+                d3.select(event.fromElement)
+                    .attr("fill-opacity", 1)
+
+                episodeLabel.text(d.Title)
+                ratingLabel.text("S" + ("00" + season).slice(-2) + "E" + ("00" + d.Episode).slice(-2) + " Rating: " + (d.imdbRating == 0 ? "N/A" : d.imdbRating))
+            })
+            .on("mouseout", (event, d) => {
+                d3.selectAll(".episode")
+                    .attr("fill-opacity", 1)
+
+                episodeLabel.text("")
+                ratingLabel.text("")
+            })
+
+
+    }
+
+    function appendShow(data, show) {
+
+        let showGroup = svg.append("g")
+            .classed("series", true)
+
+        showGroup.append("text")
+            .text(data[0].Title)
+            .attr("x", ((SEASON_COUNT + 1.2) * RADIUS) * Math.cos(angleScale(showCount - 1 - show) + EPISODE_ANGLE / 2))
+            .attr("y", height - ((SEASON_COUNT + 1.2) * RADIUS) * Math.sin(angleScale(showCount - 1 - show) + EPISODE_ANGLE / 2))
+            .attr("fill", "white")
+
+        let totalRating = 0
+        let ratingCount = 0
+
+        // Calculating Average
+        for (var i = 0; i < data.length; i++) {
+            season = data[i]
+            for (var j = 0; j < season["Episodes"].length; j++) {
+                episode = season["Episodes"][j]
+                if (episode.imdbRating != "N/A") {
+                    totalRating += Number(episode.imdbRating)
+                    ratingCount += 1
+                }
+            }
+        }
+
+        let xScale = d3.scaleLinear()
+            .domain([0, _.max(data.map(d => d.Episodes.length))])
+            .range([1, RADIUS - 8])
+
+        for (var i = 0; i < data.length; i++) {
+            d = data[i]
+            appendSeason(
+                show,
+                totalRating / ratingCount,
+                showGroup,
+                Number(d.Season),
+                d["Episodes"],
+                xScale)
+        }
+    }
+
+
+
+
+    function callback(error, data) {
+        showCount = data.length
+
+        angleScale = d3.scaleLinear()
+            .domain([0, showCount - 1])
+            .range([Math.PI / 180 * 0, Math.PI / 2 - EPISODE_ANGLE])
+
+        appendCircles()
+        appendLines()
+        
+        for (var i = 0; i < data.length; i++) {
+            appendShow(data[i], i)
+        }
+    }
+
+    d3.json("combined-data.json").then(data => {
+        callback("No Error", data)
+    })
+    // pm.getData(callback)
+</script>

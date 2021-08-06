@@ -1,0 +1,4 @@
+export ASTRA_DB_ID=7bc094f1-6368-4a76-9069-526c5ba15f4d
+export ASTRA_DB_REGION=asia-south1
+export ASTRA_DB_APPLICATION_TOKEN=AstraCS:ZyRxszqbcorQjmWHIKzxuywP:5b6fb0f82d4bba11c4329af8cbeaf7dd08dc67782442a7c8bf586bd7894e0c0b
+export ASTRA_DB_KEYSPACE=user_data

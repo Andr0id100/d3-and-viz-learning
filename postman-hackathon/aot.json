@@ -1,0 +1,94 @@
+[
+  {
+    "Title": "Attack on Titan: Junior High",
+    "Season": "1",
+    "totalSeasons": "1",
+    "Episodes": [
+      {
+        "Title": "Starting School! Titan Junior High School",
+        "Released": "2015-10-04",
+        "Episode": "1",
+        "imdbRating": "9.1",
+        "imdbID": "tt5090006"
+      },
+      {
+        "Title": "Chasing! Titan Junior High School",
+        "Released": "2015-10-11",
+        "Episode": "2",
+        "imdbRating": "7.7",
+        "imdbID": "tt5128794"
+      },
+      {
+        "Title": "Dodgeball! Titan Junior High School",
+        "Released": "2015-10-18",
+        "Episode": "3",
+        "imdbRating": "9.4",
+        "imdbID": "tt5128812"
+      },
+      {
+        "Title": "Cleanup! Titan Junior High School",
+        "Released": "2015-10-25",
+        "Episode": "4",
+        "imdbRating": "7.5",
+        "imdbID": "tt5128824"
+      },
+      {
+        "Title": "Study Hard! Titan Junior High School",
+        "Released": "2015-11-01",
+        "Episode": "5",
+        "imdbRating": "7.3",
+        "imdbID": "tt5133660"
+      },
+      {
+        "Title": "Love Letter! Titan Junior High School",
+        "Released": "2015-11-08",
+        "Episode": "6",
+        "imdbRating": "7.7",
+        "imdbID": "tt5133670"
+      },
+      {
+        "Title": "Showdown! Titan Junior High School",
+        "Released": "2015-11-15",
+        "Episode": "7",
+        "imdbRating": "8.8",
+        "imdbID": "tt5133684"
+      },
+      {
+        "Title": "Spine-chiller! Titan Junior High School",
+        "Released": "2015-11-21",
+        "Episode": "8",
+        "imdbRating": "8.0",
+        "imdbID": "tt5133688"
+      },
+      {
+        "Title": "Sweet Summer! Titan Junior High School",
+        "Released": "2015-11-29",
+        "Episode": "9",
+        "imdbRating": "8.1",
+        "imdbID": "tt5133694"
+      },
+      {
+        "Title": "Recommendation! Titan Junior High School",
+        "Released": "2015-12-06",
+        "Episode": "10",
+        "imdbRating": "8.8",
+        "imdbID": "tt5133702"
+      },
+      {
+        "Title": "Clear and Sunny! Titan Junior High School",
+        "Released": "2015-12-13",
+        "Episode": "11",
+        "imdbRating": "8.9",
+        "imdbID": "tt5133718"
+      },
+      {
+        "Title": "Attack! Titan Junior High School",
+        "Released": "2015-12-20",
+        "Episode": "12",
+        "imdbRating": "8.2",
+        "imdbID": "tt5133740"
+      }
+    ],
+    "Response": "True"
+  }
+]

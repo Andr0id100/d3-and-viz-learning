@@ -1,0 +1,524 @@
+[
+  {
+    "sessionId": "i06vu4xT01",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Un",
+      "mono"
+    ],
+    "flags": [
+      0,
+      0
+    ],
+    "parts": [
+      "DET",
+      "NOUN"
+    ],
+    "day": 13.003
+  },
+  {
+    "sessionId": "i06vu4xT02",
+    "userId": "NM6fsg7V",
+    "words": [
+      "El",
+      "toro"
+    ],
+    "flags": [
+      0,
+      0
+    ],
+    "parts": [
+      "DET",
+      "NOUN"
+    ],
+    "day": 13.003
+  },
+  {
+    "sessionId": "oOAJjWvK01",
+    "userId": "NM6fsg7V",
+    "words": [
+      "El",
+      "libro",
+      "es",
+      "nuestro"
+    ],
+    "flags": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "parts": [
+      "DET",
+      "NOUN",
+      "VERB",
+      "PRON"
+    ],
+    "day": 13.006
+  },
+  {
+    "sessionId": "oOAJjWvK02",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Su",
+      "perro",
+      "come"
+    ],
+    "flags": [
+      1,
+      0,
+      1
+    ],
+    "parts": [
+      "DET",
+      "NOUN",
+      "VERB"
+    ],
+    "day": 13.006
+  },
+  {
+    "sessionId": "KdvQTSH801",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Calcetines"
+    ],
+    "flags": [
+      0
+    ],
+    "parts": [
+      "PROPN"
+    ],
+    "day": 13.008
+  },
+  {
+    "sessionId": "KdvQTSH802",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Tu",
+      "falda"
+    ],
+    "flags": [
+      0,
+      0
+    ],
+    "parts": [
+      "DET",
+      "NOUN"
+    ],
+    "day": 13.008
+  },
+  {
+    "sessionId": "KdvQTSH803",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Tus",
+      "pantalones"
+    ],
+    "flags": [
+      1,
+      0
+    ],
+    "parts": [
+      "DET",
+      "NOUN"
+    ],
+    "day": 13.008
+  },
+  {
+    "sessionId": "KdvQTSH804",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Las",
+      "botas"
+    ],
+    "flags": [
+      0,
+      0
+    ],
+    "parts": [
+      "DET",
+      "NOUN"
+    ],
+    "day": 13.008
+  },
+  {
+    "sessionId": "KdvQTSH805",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Mi",
+      "abrigo"
+    ],
+    "flags": [
+      0,
+      0
+    ],
+    "parts": [
+      "DET",
+      "NOUN"
+    ],
+    "day": 13.008
+  },
+  {
+    "sessionId": "G8tpzpoD01",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Los",
+      "sombreros",
+      "rojos"
+    ],
+    "flags": [
+      0,
+      0,
+      0
+    ],
+    "parts": [
+      "DET",
+      "NOUN",
+      "ADJ"
+    ],
+    "day": 13.013
+  },
+  {
+    "sessionId": "G8tpzpoD02",
+    "userId": "NM6fsg7V",
+    "words": [
+      "El",
+      "jugo",
+      "es",
+      "rojo"
+    ],
+    "flags": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "parts": [
+      "DET",
+      "NOUN",
+      "VERB",
+      "ADJ"
+    ],
+    "day": 13.013
+  },
+  {
+    "sessionId": "G8tpzpoD03",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Una",
+      "camisa",
+      "roja",
+      "no",
+      "es",
+      "azul"
+    ],
+    "flags": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "parts": [
+      "DET",
+      "NOUN",
+      "ADJ",
+      "ADV",
+      "VERB",
+      "ADJ"
+    ],
+    "day": 13.013
+  },
+  {
+    "sessionId": "65DrjY4i01",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Ni",
+      "yo"
+    ],
+    "flags": [
+      0,
+      0
+    ],
+    "parts": [
+      "CONJ",
+      "PRON"
+    ],
+    "day": 13.016
+  },
+  {
+    "sessionId": "65DrjY4i02",
+    "userId": "NM6fsg7V",
+    "words": [
+      "S\u00ed",
+      "o",
+      "no"
+    ],
+    "flags": [
+      0,
+      0,
+      0
+    ],
+    "parts": [
+      "ADV",
+      "CONJ",
+      "ADV"
+    ],
+    "day": 13.016
+  },
+  {
+    "sessionId": "65DrjY4i03",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Si",
+      "t\u00fa",
+      "quieres"
+    ],
+    "flags": [
+      0,
+      0,
+      0
+    ],
+    "parts": [
+      "SCONJ",
+      "PRON",
+      "VERB"
+    ],
+    "day": 13.016
+  },
+  {
+    "sessionId": "65DrjY4i04",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Veo",
+      "que",
+      "no",
+      "es",
+      "verde"
+    ],
+    "flags": [
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "parts": [
+      "VERB",
+      "SCONJ",
+      "ADV",
+      "VERB",
+      "ADJ"
+    ],
+    "day": 13.016
+  },
+  {
+    "sessionId": "mNKPGPSY01",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Seg\u00fan",
+      "\u00e9l"
+    ],
+    "flags": [
+      0,
+      0
+    ],
+    "parts": [
+      "ADP",
+      "PRON"
+    ],
+    "day": 13.019
+  },
+  {
+    "sessionId": "mNKPGPSY02",
+    "userId": "NM6fsg7V",
+    "words": [
+      "No",
+      "es",
+      "para",
+      "usted"
+    ],
+    "flags": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "parts": [
+      "ADV",
+      "VERB",
+      "ADP",
+      "PRON"
+    ],
+    "day": 13.019
+  },
+  {
+    "sessionId": "dirBNXJv01",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Tengo",
+      "l\u00e1minas"
+    ],
+    "flags": [
+      0,
+      0
+    ],
+    "parts": [
+      "VERB",
+      "ADJ"
+    ],
+    "day": 13.021
+  },
+  {
+    "sessionId": "ZExznBuE01",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Las",
+      "ventanas"
+    ],
+    "flags": [
+      0,
+      0
+    ],
+    "parts": [
+      "DET",
+      "NOUN"
+    ],
+    "day": 13.023
+  },
+  {
+    "sessionId": "ZExznBuE02",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Una",
+      "piscina"
+    ],
+    "flags": [
+      0,
+      0
+    ],
+    "parts": [
+      "DET",
+      "NOUN"
+    ],
+    "day": 13.023
+  },
+  {
+    "sessionId": "ox2/kcAq01",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Es",
+      "mi",
+      "escritorio"
+    ],
+    "flags": [
+      0,
+      0,
+      0
+    ],
+    "parts": [
+      "VERB",
+      "DET",
+      "NOUN"
+    ],
+    "day": 13.026
+  },
+  {
+    "sessionId": "ox2/kcAq02",
+    "userId": "NM6fsg7V",
+    "words": [
+      "El",
+      "espejo"
+    ],
+    "flags": [
+      0,
+      0
+    ],
+    "parts": [
+      "DET",
+      "NOUN"
+    ],
+    "day": 13.026
+  },
+  {
+    "sessionId": "ox2/kcAq03",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Es",
+      "tu",
+      "escritorio"
+    ],
+    "flags": [
+      1,
+      1,
+      0
+    ],
+    "parts": [
+      "VERB",
+      "DET",
+      "NOUN"
+    ],
+    "day": 13.026
+  },
+  {
+    "sessionId": "ox2/kcAq04",
+    "userId": "NM6fsg7V",
+    "words": [
+      "El",
+      "espejo"
+    ],
+    "flags": [
+      1,
+      0
+    ],
+    "parts": [
+      "DET",
+      "NOUN"
+    ],
+    "day": 13.026
+  },
+  {
+    "sessionId": "ox2/kcAq05",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Es",
+      "mi",
+      "l\u00e1mpara"
+    ],
+    "flags": [
+      0,
+      0,
+      0
+    ],
+    "parts": [
+      "VERB",
+      "DET",
+      "NOUN"
+    ],
+    "day": 13.026
+  },
+  {
+    "sessionId": "ox2/kcAq06",
+    "userId": "NM6fsg7V",
+    "words": [
+      "Es",
+      "una",
+      "puerta",
+      "azul"
+    ],
+    "flags": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "parts": [
+      "VERB",
+      "DET",
+      "NOUN",
+      "ADJ"
+    ],
+    "day": 13.026
+  }
+]

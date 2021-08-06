@@ -1,0 +1,37 @@
+<style>
+    body {
+        background-color: #343434;
+    }
+</style>
+
+<div class="board"></div>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+<script>
+    var margin = { top: 40, right: 10, bottom: 10, left: 40 },
+        width = window.innerWidth - margin.left - margin.right,
+        height = window.innerHeight - margin.top - margin.bottom;
+
+    var svg = d3.select(".board")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("transform",
+            `translate(0, ${margin.top})`)
+
+    let count = 20
+    let sizeScale = d3.scaleLinear()
+        .domain([0, count])
+        .range([10, count * 10])
+
+    svg.selectAll("circle")
+        .data(_.range(1, count + 1))
+        .enter()
+        .append("circle")
+        .attr("fill", "orange")
+        .attr("cx", d => d * 20)
+        .attr("cy", height / 2)
+        .attr("r", d => sizeScale(d))
+        .attr("fill-opacity", 0.1)
+
+</script>
